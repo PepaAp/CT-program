@@ -18,12 +18,12 @@ app.get('/frontend-script', (req, res) => {
 app.get("/ct", (req, res) => {
     const d: Date = new Date();
     axios.get('https://www.ceskatelevize.cz/services-old/programme/xml/schedule.php', {
-    params: {
-      user: "test",
-      date: `${d.getDay().toString().padStart(2, "0")}.${d.getMonth().toString().padStart(2, "0")}.${d.getFullYear()}`,
-      channel: "ct1",
-      json: 1
-    }
+        params: {
+            user: "test",
+            date: `${d.getDate()}.${(d.getMonth() + 1).toString().padStart(2, "0")}.${d.getFullYear()}`,
+            channel: "ct1",
+            json: 1
+        }
     })
     .then(function (response) {
         res.send(response.data.porad);

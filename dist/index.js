@@ -20,13 +20,14 @@ app.get("/ct", (req, res) => {
     axios.get('https://www.ceskatelevize.cz/services-old/programme/xml/schedule.php', {
         params: {
             user: "test",
-            date: `${d.getDay().toString().padStart(2, "0")}.${d.getMonth().toString().padStart(2, "0")}.${d.getFullYear()}`,
+            date: `${d.getDate()}.${(d.getMonth() + 1).toString().padStart(2, "0")}.${d.getFullYear()}`,
             channel: "ct1",
             json: 1
         }
     })
         .then(function (response) {
         res.send(response.data.porad);
+        console.log(d.getDate() + 1);
     });
 });
 app.listen(PORT, () => {
