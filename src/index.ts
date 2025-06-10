@@ -9,6 +9,7 @@ app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
+    
 });
 
 app.get('/frontend-script', (req, res) => {

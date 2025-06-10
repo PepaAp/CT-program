@@ -27,7 +27,6 @@ app.get("/ct", (req, res) => {
     })
         .then(function (response) {
         res.send(response.data.porad);
-        console.log(d.getDate() + 1);
     });
 });
 app.listen(PORT, () => {
