@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/frontend-script', (req, res) => {
-    res.sendFile(__dirname + '/dist/program.js');
+    res.sendFile(__dirname + '/program.js');
 })
 
 app.get("/ct", (req, res) => {
@@ -32,5 +32,5 @@ app.get("/ct", (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log("negger");
+    console.log(`http://localhost:${PORT}`);
 });
