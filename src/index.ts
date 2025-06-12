@@ -17,7 +17,8 @@ app.get('/frontend-script', (req, res) => {
 })
 
 app.get("/ct", (req, res) => {
-    const d: Date = new Date();
+    const d: Date = new Date();    
+
     axios.get('https://www.ceskatelevize.cz/services-old/programme/xml/schedule.php', {
         params: {
             user: "test",
