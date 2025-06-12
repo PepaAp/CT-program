@@ -26,6 +26,9 @@ async function loadData() {
         const datal = await data.json();
         let programs = '';
         datal.forEach((card, index) => {
+            if (JSON.stringify(card.noticka) === '{}') {
+                card.noticka = '';
+            }
             const minutes = card.stopaz.slice(0, 3).replace(/^0+/, '');
             programs += `
                     <h4 id="${index}">${card.cas}</h4>             

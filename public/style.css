@@ -55,12 +55,13 @@ footer {
     color: white;
     margin-left: 1vw;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .card {
     background-color: rgb(28, 28, 38);
     width: 10vw;
-    height: 35vh;
+    max-height: 35vh;
     box-shadow: .2rem .2rem .7rem rgb(105, 105, 105), -.2rem -.2rem .7rem rgb(107, 107, 107);
     margin: auto;
     margin-top: .5rem; 
